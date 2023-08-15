@@ -43,9 +43,9 @@ const Features: React.FC = () => {
     <motion.div
       key={i}
       onClick={() => handleSectionClick(i)}
-      className={`border border-blue-50 rounded-md p-2.5 cursor-pointer ${
+      className={`border border-blue-50 rounded-md p-2.5 cursor-pointer w-full md:max-w-[450px] ${
         section === i ? "bg-blue-50" : "bg-blueGray-50"
-      } hover:bg-blue-50 transition-colors duration-300 max-w-[450px]`}
+      } hover:bg-blue-50 transition-colors duration-300`}
       initial={{ backgroundColor: "#ffffff" }}
       animate={{
         backgroundColor: section === i ? "#dbeafe" : "#ffffff",
@@ -82,7 +82,7 @@ const Features: React.FC = () => {
   // Render the sections and images
   return (
     <div className="flex flex-col space-y-6 items-center justify-center-auto">
-      <div className="flex flex-col md:flex-row justify-between w-full max-w-[1400px] mx-auto space-y-4 md:space-y-0">
+      <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between w-full max-w-[1400px] mx-auto">
         {sectionComponents}
       </div>
       <div>
