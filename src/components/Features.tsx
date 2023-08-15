@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface SectionType {
@@ -68,12 +68,11 @@ const Features: React.FC = () => {
       transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
     >
       {section === i && (
-        <Image
+        <img
           className="rounded-md"
           src={`${gif}?t=${lastClicked}`} // Add timestamp to refresh image
-          width={1400}
-          height={1000}
-          layout='intrinsic'
+          width="1400"
+          height="1000"
           alt='Feature GIF'
         />
       )}
