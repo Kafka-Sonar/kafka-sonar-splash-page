@@ -24,20 +24,29 @@ interface GitHubRepoData {
     stargazers_count: number;
 }
 
+interface NavbarItemsProps {
+    starCount: number | null;
+    isMobile?: boolean;
+}
+
 // Navbar items component
-const NavbarItems: React.FC<{ starCount: number | null }> = ({ starCount }) => (
+const NavbarItems: React.FC<NavbarItemsProps> = ({ starCount, isMobile }) => (
     <>
-        {/* Links for Features and Team sections */}
-        <motion.div className="mr-3" whileHover={{ scale: 1.05 }} variants={item}>
-            <ScrollLink to="features" smooth={true} duration={500}>
-                Features
-            </ScrollLink>
-        </motion.div>
-        <motion.div className="mr-3" whileHover={{ scale: 1.05 }} variants={item}>
-            <ScrollLink to="team" smooth={true} duration={500}>
-                Team
-            </ScrollLink>
-        </motion.div>
+        {!isMobile && (
+            <>
+                {/* Links for Features and Team sections */}
+                <motion.div className="mr-3" whileHover={{ scale: 1.05 }} variants={item}>
+                    <ScrollLink to="features" smooth={true} duration={500}>
+                        Features
+                    </ScrollLink>
+                </motion.div>
+                <motion.div className="mr-3" whileHover={{ scale: 1.05 }} variants={item}>
+                    <ScrollLink to="team" smooth={true} duration={500}>
+                        Team
+                    </ScrollLink>
+                </motion.div>
+            </>
+        )}
 
         {/* Icons linked to GitHub, LinkedIn, and Medium */}
         <div className="flex space-x-3 sm:mt-0">
@@ -123,20 +132,10 @@ const Navbar: React.FC = () => {
                 <NavbarItems starCount={starCount} />
             </div>
 
-            {/* Mobile Menu Icon */}
-            <div className="sm:hidden">
-                <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                    <FaBars size={24} />
-                </button>
-            </div>
-
             {/* Mobile Navbar Items */}
-            {isMenuOpen && (
-                <div className="flex flex-row justify-end space-x-2 fixed top-14 right-4 bg-blueGray-50 z-50 sm:hidden">
-                    <NavbarItems starCount={starCount} />
-                </div>
-            )}
-
+            <div className="flex space-x-2 sm:hidden">
+                <NavbarItems starCount={starCount} isMobile={true} />
+            </div>
         </motion.div>
     );
 }
