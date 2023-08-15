@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 1400px; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+}
+
+.grid {
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.grid > * {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 20px;
+}
+
+.flex-row > *:first-child {
+  margin-left: 0;
+}
+
+.flex-row > *:last-child {
+  margin-right: 0;
+}
