@@ -54,3 +54,13 @@
 .flex-row > *:last-child {
   margin-right: 0;
 }
+
+.logo {
+  width: 150px;
+}
+
+@media (max-width: 640px) {
+  .logo {
+      width: 120px;
+  }
+}

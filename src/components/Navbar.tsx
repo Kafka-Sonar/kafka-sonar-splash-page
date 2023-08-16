@@ -35,12 +35,12 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({ starCount, isMobile }) => (
         {!isMobile && (
             <>
                 {/* Links for Features and Team sections */}
-                <motion.div className="mr-3" whileHover={{ scale: 1.05 }} variants={item}>
+                <motion.div className="mr-5" whileHover={{ scale: 1.05 }} variants={item}>
                     <ScrollLink to="features" smooth={true} duration={500}>
                         Features
                     </ScrollLink>
                 </motion.div>
-                <motion.div className="mr-3" whileHover={{ scale: 1.05 }} variants={item}>
+                <motion.div className="mr-5" whileHover={{ scale: 1.05 }} variants={item}>
                     <ScrollLink to="team" smooth={true} duration={500}>
                         Team
                     </ScrollLink>
@@ -49,7 +49,7 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({ starCount, isMobile }) => (
         )}
 
         {/* Icons linked to GitHub, LinkedIn, and Medium */}
-        <div className="flex space-x-3 sm:mt-0">
+        <div className="flex space-x-5 sm:mt-0">
             {/* GitHub icon with star count */}
             <motion.a
                 href="https://github.com/oslabs-beta/Kafka-Sonar"
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
 
     return (
         <motion.div className="top-0 left-0 w-full sm:w-1400 z-50 flex flex-row justify-between items-center pt-4 sm:py-8 bg-blueGray-50 text-gray-800 font-bold" variants={container} initial="hidden" animate="show">
-            <Image src="/kafka-sonar-black-logo.png" alt="Product Logo" width={150} height={30} />
+            <Image src="/kafka-sonar-black-logo.png" alt="Product Logo" width={150} height={30} className="logo"/>
 
             {/* Desktop Navbar Items */}
             <div className="hidden sm:flex">

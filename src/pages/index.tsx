@@ -99,12 +99,12 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Screenshot */}
+        {/* Placeholder for screenshot carousel */}
         <div className="flex w-full justify-center mt-3 md:w-2/5 md:justify-end rounded-md m-auto items-center">
           {/* <AnimatedLink
             className="w-full"
             href="https://github.com/oslabs-beta/Kafka-Sonar"
-            src="/screenshot.png"
+            src="/placeholder.png"
             alt="Kafka Sonar Screenshot"
           /> */}
         </div>
