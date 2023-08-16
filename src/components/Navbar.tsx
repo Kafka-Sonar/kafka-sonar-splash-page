@@ -124,7 +124,7 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <motion.div className="top-0 left-0 w-full sm:w-1400 z-50 flex flex-row justify-between items-center pt-4 sm:py-8 bg-blueGray-50 text-gray-800 font-bold" variants={container} initial="hidden" animate="show">
+        <motion.div className="top-0 left-0 w-full sm:w-1400 z-50 flex flex-row justify-between items-center pt-4 pb-12 sm:pt-4 sm:pb-12 bg-blueGray-50 text-gray-800 font-bold" variants={container} initial="hidden" animate="show">
             <Image src="/kafka-sonar-black-logo.png" alt="Product Logo" width={150} height={30} className="logo"/>
 
             {/* Desktop Navbar Items */}
