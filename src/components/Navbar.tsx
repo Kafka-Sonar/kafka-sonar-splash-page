@@ -83,7 +83,7 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({ starCount, isMobile }) => (
 
             {/* Medium icon */}
             <motion.a
-                href="https://medium.com/@upnata/19613a4463b2"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-800"
