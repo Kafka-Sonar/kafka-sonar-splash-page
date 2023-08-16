@@ -48,7 +48,6 @@ const item = {
 
 const Contributors = () => {
     return (
-        // Container for all team members
         <motion.div 
             className="flex justify-center align-content-center flex-wrap gap-4" 
             variants={container} 
@@ -58,8 +57,7 @@ const Contributors = () => {
             {team.map(({ name, src, linkedIn, github }, i) => (
                 // Individual contributor's card
                 <motion.div
-                    className="p-4 rounded flex flex-col items-center gap-2 bg-blue-100"
-                    style={{ width: '192px', height: '240px' }}
+                    className="p-4 rounded flex flex-col items-center gap-2 bg-blue-100 w-full sm:w-[192px] h-[240px]"
                     whileHover={{ boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)", translateY: -10 }}
                     transition={{ duration: ".3" }}
                     variants={item}
@@ -67,7 +65,7 @@ const Contributors = () => {
                 >
                     {/* Contributor's image */}
                     <Image
-                        style={{ borderRadius: '50%', overflow: 'hidden' }}
+                        className="rounded-full overflow-hidden"
                         src={src}
                         width={100}
                         height={100}
