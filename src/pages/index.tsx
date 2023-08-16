@@ -67,7 +67,7 @@ const Home: React.FC = () => {
         <div className="w-full md:w-3/5 flex flex-col items-start justify-center text-left">
         <MotionTitle>
           {/* Main Headings */}
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-2">KAFKA CLUSTER MONITORING</h2>
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight md:mb-2">KAFKA CLUSTER MONITORING</h2>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">ON DOCKER DESKTOP</h2>
           {/* Description */}
           <h5 className="text-xl md:text-2xl text-gray-500">Kafka Sonar is a first-of-its-kind Docker Desktop extension aimed at enhancing the Kafka developer experience.</h5>
