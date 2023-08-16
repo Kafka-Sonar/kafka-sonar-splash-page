@@ -63,19 +63,17 @@ const Features: React.FC = () => {
     <motion.div
       key={i}
       className="rounded-md m-auto"
-      initial={{ opacity: 0, x: 200 }}
-      animate={{ opacity: section === i ? 1 : 0, x: section === i ? 0 : 200 }}
-      transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: section === i ? 1 : 0 }}
+      transition={{ duration: 0.3 }}
     >
-      {section === i && (
-        <img
-          className="rounded-md"
-          src={`${gif}?t=${lastClicked}`} // Add timestamp to refresh image
-          width="1400"
-          height="1000"
-          alt='Feature GIF'
-        />
-      )}
+      <img
+        className={`rounded-md ${section !== i && "hidden"}`}
+        src={`${gif}?t=${lastClicked}`}
+        width="1400"
+        height="1000"
+        alt='Feature GIF'
+      />
     </motion.div>
   ));
 
