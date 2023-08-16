@@ -65,13 +65,13 @@ const Home: React.FC = () => {
       <section id="landing" className="flex flex-wrap items-center justify-center py-12 md:py-24 bg-blueGray-50 text-gray-800">
         {/* Content */}
         <div className="w-full md:w-3/5 flex flex-col items-start justify-center text-left">
-          <MotionTitle>
-            {/* Main Headings */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">KAFKA CLUSTER MONITORING</h2>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">ON DOCKER DESKTOP</h2>
-            {/* Description */}
-            <h5 className="text-xl md:text-2xl mt-4 text-gray-500">Kafka Sonar is a first-of-its-kind Docker Desktop extension aimed at enhancing the Kafka developer experience.</h5>
-          </MotionTitle>
+        <MotionTitle>
+          {/* Main Headings */}
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-2">KAFKA CLUSTER MONITORING</h2>
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">ON DOCKER DESKTOP</h2>
+          {/* Description */}
+          <h5 className="text-xl md:text-2xl text-gray-500">Kafka Sonar is a first-of-its-kind Docker Desktop extension aimed at enhancing the Kafka developer experience.</h5>
+        </MotionTitle>
           {/* Action Buttons */}
           <div className="mt-8 space-y-4 md:space-y-0 md:space-x-4 self-start max-w-500 flex flex-col md:flex-row">
             <a href="https://github.com/oslabs-beta/Kafka-Sonar" target="_blank" rel="noopener noreferrer">

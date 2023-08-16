@@ -11,6 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="icon" href="/favicon.png" />
+          <title>Kafka Sonar</title>
         </Head>
         <body>
           <Main />
