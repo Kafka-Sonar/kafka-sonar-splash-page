@@ -8,24 +8,28 @@ const team = [
         github: "https://github.com/stekim4",
         name: "Steven Kim",
         src: "/steven.jpeg",
+        location: "New York City"
     },
     {
         linkedIn: "https://www.linkedin.com/in/michaeljway/",
         github: "https://github.com/mjsway",
         name: "Michael Way",
         src: "/michael.jpg",
+        location: "RTP, NC"
     },
     {
         linkedIn: "https://www.linkedin.com/in/upasananatarajan/",
         github: "https://github.com/unatarajan",
         name: "Upasana Natarajan",
         src: "/upasana.jpg",
+        location: "Atlanta, GA"
     },
     {
         linkedIn: "https://www.linkedin.com/in/kareemhs",
         github: "https://github.com/kareemhs",
         name: "Kareem Saleh",
         src: "/kareem.png",
+        location: "Delaware"
     },
 ];
 
@@ -54,10 +58,10 @@ const Contributors = () => {
             initial="hidden" 
             animate="show"
         >
-            {team.map(({ name, src, linkedIn, github }, i) => (
+            {team.map(({ name, src, location, linkedIn, github }, i) => (
                 // Individual contributor's card
                 <motion.div
-                    className="p-4 rounded flex flex-col items-center gap-2 bg-blue-100 w-full sm:w-[192px] h-[240px]"
+                    className="p-4 rounded flex flex-col items-center gap-2 bg-blue-100 w-full sm:w-[192px]"
                     whileHover={{ boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)", translateY: -10 }}
                     transition={{ duration: ".3" }}
                     variants={item}
@@ -76,7 +80,10 @@ const Contributors = () => {
                     <div className="mt-1 text-l font-bold">{name}</div>
                     
                     {/* Contributor's title */}
-                    <div className="text-base">Software Engineer</div>
+                    <div className="text-base text-gray-600">Software Engineer</div>
+
+                    {/* Contributor's location */}
+                    <div className="text-base text-gray-600">{location}</div>
 
                     {/* Icons linked to contributor's GitHub and LinkedIn */}
                     <div className="mt-1 flex justify-center gap-2">
