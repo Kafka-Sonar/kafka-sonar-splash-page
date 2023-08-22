@@ -83,7 +83,7 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({ starCount, isMobile }) => (
 
             {/* Medium icon */}
             <motion.a
-                href=""
+                href="https://medium.com/@upnata/making-waves-with-kafka-sonar-leveraging-docker-to-streamline-kafka-cluster-monitoring-and-19613a4463b2#8db0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-800"
