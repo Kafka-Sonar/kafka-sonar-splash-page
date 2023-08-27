@@ -35,12 +35,12 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({ starCount, isMobile }) => (
         {!isMobile && (
             <>
                 {/* Links for Features and Team sections */}
-                <motion.div className="mr-5" whileHover={{ scale: 1.05 }} variants={item}>
+                <motion.div className="mr-5" whileHover={{ scale: 1.05 }} variants={item} style={{ cursor: "pointer" }}>
                     <ScrollLink to="features" smooth={true} duration={500}>
                         Features
                     </ScrollLink>
                 </motion.div>
-                <motion.div className="mr-5" whileHover={{ scale: 1.05 }} variants={item}>
+                <motion.div className="mr-5" whileHover={{ scale: 1.05 }} variants={item} style={{ cursor: "pointer" }}>
                     <ScrollLink to="team" smooth={true} duration={500}>
                         Team
                     </ScrollLink>
